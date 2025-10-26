@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 const buscarPromo = async (id) => {
     try {
         const replit = 'https://42053612-9498-4573-97e4-6b2a46d0c9dd-00-3jhhnuadv9mah.riker.replit.dev:3000/'; 
-        const url = replit + id;
+        const url = replit + "promo/" + id;
 
         const response = await fetch(url);
         if (!response.ok) throw new Error('Erro ao carregar dados do servidor');
