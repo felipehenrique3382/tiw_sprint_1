@@ -1,0 +1,34 @@
+{
+"promo" : [
+    {
+        "id": "0",
+        "titulo": "Pacote Férias de Verão",
+        "descricao": "Descontos exclusivos para destinos de praia",
+        "conteudo": "Aproveite o pacote completo com hospedagem, transporte e passeios com até 40% de desconto nas principais praias do Nordeste.",
+        "categoria": "Viagem",
+        "autor": "EquipePromoTur",
+        "data": "01/10/2025",
+        "imagem": "./assets/imagem/promo4.png"
+    },
+    {
+        "id": "1",
+        "titulo": "Pacote de Inverno",
+        "descricao": "Promoção para curtir o frio com estilo",
+        "conteudo": "Pacote inclui hospedagem em chalés aconchegantes, café da manhã colonial e passeios pelas montanhas de Minas Gerais.",
+        "categoria": "Turismo",
+        "autor": "PromoViagens",
+        "data": "10/10/2025",
+        "imagem": "./assets/imagem/promo3.png"
+    },
+    {
+        "id": "2",
+        "titulo": "Pacote Cultural Urbano",
+        "descricao": "Explore as capitais brasileiras com desconto",
+        "conteudo": "Descubra o melhor da cultura e gastronomia em São Paulo, Rio de Janeiro e Belo Horizonte com pacotes de até 30% de desconto.",
+        "categoria": "Cultura",
+        "autor": "CulturaTrip",
+        "data": "20/10/2025",
+        "imagem": "./assets/imagem/promo1.png"
+    }
+]
+}

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Função para buscar os dados da promoção no Replit
 const buscarPromo = async (id) => {
     try {
-        const replit = 'https://42053612-9498-4573-97e4-6b2a46d0c9dd-00-3jhhnuadv9mah.riker.replit.dev:3000/'; 
+        const replit = 'https://42053612-9498-4573-97e4-6b2a46d0c9dd-00-3jhhnuadv9mah.riker.replit.dev:3000/';
         const url = replit + "promo/" + id;
 
         const response = await fetch(url);
@@ -34,9 +34,13 @@ const apresentarDetalhesDaPromo = () => {
               <h2 class="fw-bold mb-3">${promo.titulo}</h2>
               <p class="text-muted">${promo.categoria} - ${promo.data}</p>
               <p class="text-success fw-bold">${promo.autor}</p>
-              <img src="${promo.imagem}" alt="${promo.titulo}" class="img-fluid rounded mb-4" style="max-width:400px">
+              <img class="painel-img" src="${promo.imagem}" alt="${promo.titulo}">
               <p class="lead">${promo.conteudo}</p>
-              <a href="promo.html" class="btn btn-primary mt-3">Voltar</a>
+
+              <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="promo.html" class="btn btn-secondary">Voltar</a>
+                <a href="checkout.html" class="btn btn-success">Finalizar Compra</a>
+              </div>
             </div>
         `;
     } else {
