@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Promoções de Pacotes • Pontuor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .promo-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #dc3545;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        .card-promo {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card-promo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .promo-price {
+            font-size: 2rem;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5 d-flex align-items-center" href="home.html">
+                    <i class="bi bi-airplane-fill me-3" style="font-size: 24px;"></i>
+                    <h3 class="mb-0 text-white">Pontuor</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu-links">
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-4 text-white" aria-current="page" href="promocoes.html">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="favoritos.html">Favoritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="display-4">🔥 Promoções Imperdíveis</h1>
+                <p class="lead">Aproveite nossos pacotes especiais com descontos exclusivos!</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Promoção 1: Caribe -->
+                <div class="col-md-4">
+                    <div class="card card-promo">
+                        <div class="position-relative">
+                            <span class="promo-badge">-30% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800" 
+                                 class="card-img-top" alt="Caribe" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Caribe Paradisíaco</h5>
+                            <p class="card-text">7 dias em Cancún com all-inclusive em resort 5 estrelas</p>
+                            <div class="mb-3">
+                                <span class="old-price">R$ 8.500</span>
+                                <div class="promo-price">R$ 5.950</div>
+                                <small class="text-muted">por pessoa</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Passagem aérea</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel all-inclusive</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Transfer aeroporto</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Seguro viagem</li>
+                            </ul>
+                            <button class="btn btn-danger w-100 mt-3">
+                                <i class="bi bi-cart-plus"></i> Reservar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promoção 2: Europa -->
+                <div class="col-md-4">
+                    <div class="card card-promo">
+                        <div class="position-relative">
+                            <span class="promo-badge">-25% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800" 
+                                 class="card-img-top" alt="Paris" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paris Romântica</h5>
+                            <p class="card-text">10 dias na Cidade Luz com passeios inclusos</p>
+                            <div class="mb-3">
+                                <span class="old-price">R$ 12.000</span>
+                                <div class="promo-price">R$ 9.000</div>
+                                <small class="text-muted">por pessoa</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Passagem aérea</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Hotel 4 estrelas</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> City tour Torre Eiffel</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Ingresso Louvre</li>
+                            </ul>
+                            <button class="btn btn-danger w-100 mt-3">
+                                <i class="bi bi-cart-plus"></i> Reservar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promoção 3: Brasil -->
+                <div class="col-md-4">
+                    <div class="card card-promo">
+                        <div class="position-relative">
+                            <span class="promo-badge">-40% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800" 
+                                 class="card-img-top" alt="Fernando de Noronha" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fernando de Noronha</h5>
+                            <p class="card-text">5 dias no paraíso brasileiro com mergulhos</p>
+                            <div class="mb-3">
+                                <span class="old-price">R$ 6.500</span>
+                                <div class="promo-price">R$ 3.900</div>
+                                <small class="text-muted">por pessoa</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Passagem aérea</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Pousada à beira-mar</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 2 mergulhos</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Passeio Ilha Tour</li>
+                            </ul>
+                            <button class="btn btn-danger w-100 mt-3">
+                                <i class="bi bi-cart-plus"></i> Reservar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações adicionais -->
+            <div class="alert alert-info mt-5">
+                <h5><i class="bi bi-info-circle"></i> Condições das Promoções</h5>
+                <ul>
+                    <li>Promoções válidas até 31/01/2026 ou enquanto durarem os estoques</li>
+                    <li>Preços por pessoa em apartamento duplo</li>
+                    <li>Parcelamento em até 10x sem juros</li>
+                    <li>Consulte disponibilidade de datas</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Pontuor. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/usuarioLogado.js"></script>
+</body>
+</html>

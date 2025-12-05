@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Pacotes • Pontuor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5 d-flex align-items-center" href="home.html">
+                    <i class="bi bi-airplane-fill me-3" style="font-size: 24px;"></i>
+                    <h3 class="mb-0 text-white">Pontuor</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu-links">
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="promocoes.html">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-4 text-white" aria-current="page" href="cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="favoritos.html">Favoritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-white" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-5">
+        <div id="mensagem" class="mb-3"></div>
+        <h2>Cadastro de Pacotes de Viagem</h2>
+        <form id="formCadastroItem" class="border p-4 mb-4 bg-light rounded">
+            <div class="mb-3">
+                <label class="form-label">Nome do Pacote</label>
+                <input type="text" id="titulo" class="form-control" required placeholder="Ex: Paris Romântica">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Data de Partida</label>
+                    <input type="date" id="dataLancamento" class="form-control" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Duração</label>
+                    <input type="text" id="duracao" class="form-control" required placeholder="Ex: 7 dias / 6 noites">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Destino</label>
+                    <input type="text" id="status" class="form-control" required placeholder="Ex: Paris, França">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Categoria (separadas por vírgula)</label>
+                    <input type="text" id="generos" class="form-control" placeholder="Ex: Europa, Romântico" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Preço Original (R$)</label>
+                    <input type="number" id="direcao" class="form-control" required placeholder="12000">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Preço Promocional (R$)</label>
+                    <input type="number" id="roteiro" class="form-control" required placeholder="9000">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Desconto (%)</label>
+                    <input type="number" id="desconto" class="form-control" placeholder="25">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Inclusos (separados por vírgula)</label>
+                <input type="text" id="elenco" class="form-control" placeholder="Ex: Passagem aérea, Hotel 4 estrelas, City tour" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descrição do Pacote</label>
+                <textarea id="sinopse" class="form-control" rows="3" required placeholder="Descreva os detalhes do pacote..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Imagem Principal (URL)</label>
+                <input type="url" id="capaUrl" class="form-control" placeholder="https://exemplo.com/imagem.jpg" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fotos Adicionais (URLs)</label>
+                <div id="fotosContainer">
+                    <div class="input-group mb-2 foto-url-row">
+                        <input type="url" class="form-control foto-url" placeholder="https://exemplo.com/foto1.jpg" required>
+                        <button class="btn btn-outline-danger btn-remover-foto" type="button">Remover</button>
+                    </div>
+                </div>
+                <button id="btnAdicionarFoto" class="btn btn-sm btn-primary mt-2" type="button">Adicionar URL de foto</button>
+            </div>
+            <button type="submit" id="btnSalvar" class="btn btn-success">Cadastrar Pacote</button>
+        </form>
+
+        <h3>Pacotes Cadastrados</h3>
+        <table class="table table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Pacote</th>
+                    <th>Destino</th>
+                    <th>Data Partida</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaItens"></tbody>
+        </table>
+    </div>
+
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Pontuor. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/crudDados.js"></script>
+    <script src="./assets/scripts/usuarioLogado.js"></script>
+</body>
+</html>
